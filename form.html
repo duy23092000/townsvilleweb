@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>TCMC - Form</title>
+<link href="stylesheet.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div id="banner">
+	<img src="TCMCbanner01.png" alt="banner">
+</div>
+<h1>Townsville Community Music Centre</h1>
+<table>
+	<tr id="row">
+		<td><a href="index.html">Home</a></td>
+		<td><a href="general.html">General Information</a></td>
+		<td><a href="members.html">Members</a></td>
+		<td><a href="events.html">Events/Concerts</a></td>
+		<td><a href="gallery.html">Photo Gallery</a></td>
+		<td><a href="form.html">Form</a></td>
+		<td><a href="sponsors.html">Sponsors</a></td>
+	</tr>
+</table>
+<div id="mainpage">
+<h2>Membership Application Form</h2>
+
+<table  onsubmit="return checkForm()" action="Homepage" method="post" name="mainForm" id="mainForm">
+	<tr>
+		<td>Date:</td>
+		<td ><input type="date" id="date" name="date"></td>
+	</tr>
+	<tr>
+		<td>First name:</td>
+		<td ><input name="first_name" type="text" id="first_name" size="40"></td>
+	</tr>
+	<tr>
+		<td>Surnanme:</td>
+		<td ><input name="surname" type="text" id="surname" size="40"></td>
+	</tr>
+	<tr>
+		<td id="postal">Postal Address:</td>
+		<td ><textarea name="address" cols="31" rows="4" id="address"></textarea> </td>
+	</tr>
+	<tr>
+		<td>Phone day: </td>
+		<td ><input name="phoneday" id="phoneday" size="40" typep="text"></td>
+		<td>After hours:</td>
+		<td ><input type="number" id="hours" name="hours"></td>
+	</tr>
+	<tr>
+		<td>Mobile:</td>
+		<td>
+           <input name="mobile style=" type="text" id="mobile" onKeyUp="setColourBasedOnLength('phone', 8)" size="40" color:#000000>
+        </td>
+	</tr>
+	<tr>
+		<td>Email:</td>
+		<td id="box"><input name="email" type="email" id="email" placeholder="e.g: john.smith@gmail.com" size="40" onBlur="changeColor(this, '#990099')"></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>(It is preferable to email all communication, newsletters etc.)</td>
+		<td><input type="submit" value="Submit" onClick="displayName(this.form)" ></td>
+	</tr>
+
+</table>
+<p>I would like to make a tax deductible donation. I enclose a further $<input type="number" id="money" name="money"></p>
+<p>The Music Centre is also registered as a Deductible Gift Recipient. Any extra donations are tax-deductible!</p>
+<br>
+<p>Please make cheques payable to Townsville Community Music Centre Inc, and post to:</p>
+<p>PO Box 1006, Townsville, Qld 4810</p>
+<br>
+<p>Or Deposit to account:</p>
+<p>Account Name: Townsville Community Music Centre Inc.</p>
+<p>Account Number: 141 475 053</p>
+<p>Bank Bendigo Bank</p>
+<p>BSB Number: 633 000</p>
+<br>
+<p>We value your comments and suggestions:</p>
+<textarea name="comment" cols="50" rows="6" id="textarea"></textarea>
+
+<input type="submit" value="Submit" onClick="displayName(this.form)">
+
+<p>Phone     (07) 4724 2086</p>
+<p>Mobile    0402 255 182</p>
+<br>
+<p>Email <a href="admin@townsvillemusic.org.au">admin@townsvillemusic.org.au</a></p>
+<p>Website  <a href="www.townsvillemusic.org.au ">www.townsvillemusic.org.au </a> </p>
+<p>ABN:  35 039 662 787    Not GST Registered</p>
+</div>
+
+<div id="bulletin">
+	 <img src="TCMC150100.jpg" alt="sublogo" id="sublogo">
+	 <div id="detail">
+	 	<p>Townsville Civic Theatre </p>
+	 	<p>41 Boundary Street,</p>
+	 	<p>Townsville</p>
+	 	<p>P.O. Box 1006</p>
+	 	<p>Townsville 4810</p>
+	 </div>
+	 <div id="reminder">
+	 	<p>Please make cheques payable to Townsville Community Music Centre Inc, and post to: </p>
+	 	<p>PO Box 1006, Townsville, Qld 4810</p>
+	 	<p>Or  Deposit to account:</p>
+	 	<p>Account Name:	Townsville Community Music Centre Inc.</p>
+	 	<p>Account Number: 	141 475 053</p>
+	 	<p>Bank	Bendigo Bank</p>
+	 	<p>BSB Number:	633 000</p>
+	 	<p>It is also possible to pay online by Visa, Mastercard or PayPal
+From our website - <a href="www.townsvillemusic.org.au">www.townsvillemusic.org.au</a>
+</p>
+	 </div>
+</div>
+<script type="text/javascript">
+function checkForm() {
+		var d = document.getElementById('mainForm'); // just a shortcut
+		var errors = false;
+		var errorMsg = "";
+// basic check required fields
+		if (d.name.value == "") {
+				errorMsg += "Please enter your name.\n";
+				errors = true;
+		}
+		// check if one of the radio buttons for site rating is selected
+		var checkedSiteRating = false;
+		for (var i = 0; i < 3; i++) {
+				if (d.siterating[i].checked)
+						checkedSiteRating = true;
+		}
+		if (!checkedSiteRating) {
+				errorMsg += "Please select a site rating.\n";
+				errors = true;
+		}
+		// if errors exist, popup error message
+		if (errors)
+				alert(errorMsg);
+		// return true (submit form) or false (don't submit form) depending on errors
+		return !errors;
+}
+
+function setColourBasedOnLength(name, minValue) {
+		var f = document.getElementById(name);
+		if (f.value.length >= minValue)
+				f.style.color = "#0C0";
+		else
+				f.style.color = "#C00";
+
+		f.size = f.value.length + 1;
+		f.style.width = "auto";
+}
+function changeStyle(element) {
+	element.style.color = "#FF0000"
+}
+
+function changeColor(element,color) {
+	element.style.color = color
+}
+
+function displayName(form) {
+		alert ('Hello' + form.lastname.value + 'You have successfully registered')
+	}
+</script>
+<div id="footer">
+	<p>Visit us at <a href="https://www.facebook.com/townsvillemusic/ ">&#9400 Facebook</a></p>
+</div>
+</body>
+
+</html>

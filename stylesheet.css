@@ -1,0 +1,85 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+body {background-color: darkblue; margin-left: 50px; margin-right: 50px;}
+
+
+h1 {text-align: center; color: black; font-size: 50px; background-color: fuchsia; font-family:Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif"}
+h2 {color: black; font-size: 35px; margin-left: 10px}
+h3 {color: black; font-size: 26px; margin-left: 10px}
+p {color: black; font-size: 18px; margin-left: 10px }
+li {color: black; margin-left: 10px }
+
+
+table {width: 100%; text-align: center; background-color:#C4F5DA; }
+
+#preview {margin-left: auto; margin-right: auto; display: block;}
+
+#banner {width: 100%}
+
+#row {background-color: cadetblue;}
+
+td {width: 500px}
+
+td a:hover{
+	opacity: 0.5
+}
+
+.random {
+	margin-left: auto; margin-right: auto; display: block; padding: 25px
+}
+.event { padding: 25px
+}
+
+#contact {padding: 25px}
+
+#bulletin {float: right; width:20%; background-color: dimgrey; padding-bottom: 3000px }
+#mainpage {float: left; background-color:#BCF8B7 ; width: 80%; margin-top: 10px; font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif"  }
+#bulletin1 { background-color: white; margin: 10px; padding: 10px;}
+#bulletin2 {margin: 10px; padding: 10px; background-color: white}
+#bulletin3 {margin: 10px; padding: 10px; background-color: white}
+#bulletin4 {margin: 10px; padding: 10px; background-color: white}
+#bulletin5 {margin: 10px; padding: 10px; background-color: white}
+#bulletin6 {margin: 10px; padding: 10px; background-color: white}
+#bulletin7 {margin: 10px; padding: 10px; background-color: white}
+
+
+
+#ayo {margin-left: 35%}
+
+
+
+photos {text-align: center; width: 100%;}
+
+#textarea {margin-left: 10px}
+#postal {padding-bottom: 60px}
+#sublogo {margin-left: 10px; margin-top:10px}
+#detail { background-color: white; margin-left: 10px; padding-top: 5px; padding-bottom: 5px; margin-right: -25px}
+#reminder {background-color: darkviolet; margin-left: 10px; margin-right: -25px}
+
+#image {overflow: hidden; margin-left: 450px}
+#button1 {float: left; position: relative; bottom: 150px; left: 425px}
+#button2 {float:right; position: relative; bottom: 150px; right: 460px}
+.photoGallery {padding-top: 20px}
+
+#history_image{margin-left: 10px}
+
+#members {margin-left: 10px}
+#QL {margin-left: 10px}
+#city { margin-left: 10px}
+
+#footer {color:white; background-color: darkorchid; text-align: center;}
+
+#footer a:hover{
+	background-color: aliceblue;
+	
+}
+
+#facebook {float: right; position: relative; background-size: 100px; top: 0px; 
+padding-left: 30px; padding-right: 30px; padding-top: 30px; padding-bottom: 50px; font-family:Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif"; background-color: black}
+
+#facebook a:hover { 
+	color: aqua;
+	opacity: 0.5
+}
